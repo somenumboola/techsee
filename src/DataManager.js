@@ -6,7 +6,7 @@ class DataManager {
     }
 
     fetch(query) {
-        return axios.get(this.url + query);
+        return axios.get(this.url + encodeURIComponent(query));
     }
 }
 
