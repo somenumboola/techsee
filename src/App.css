@@ -30,3 +30,14 @@
     transform: rotate(360deg);
   }
 }
+.sample {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+span.alarm input {
+  border-color: red !important;
+}

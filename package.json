@@ -3,9 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@atlaskit/banner": "^7.0.8",
+    "@atlaskit/button": "^9.0.16",
+    "@atlaskit/dynamic-table": "^10.0.16",
+    "@atlaskit/field-text": "^7.0.13",
+    "@atlaskit/form": "^4.0.15",
+    "@atlaskit/icon": "^14.2.1",
+    "@atlaskit/page": "^8.0.10",
+    "@atlaskit/tag": "^6.1.0",
+    "@atlaskit/tag-group": "^6.0.7",
+    "@atlaskit/tooltip": "^12.1.9",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
-    "react-scripts": "2.1.1"
+    "react-scripts": "2.1.1",
+    "styled-components": "^3.2.6"
   },
   "scripts": {
     "start": "react-scripts start",
