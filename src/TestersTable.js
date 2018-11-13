@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   min-width: 600px;
 `;
 
-const NoResultPlaceholder = <h2>No matching results found</h2>;
+const NoResultPlaceholder = <h2>No data!</h2>;
 const ErrorResultPlaceholder = <h2>Error occured. Please check message above.</h2>;
 
 

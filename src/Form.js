@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import TextField, {FieldTextStateless}  from "@atlaskit/field-text";
+import {FieldTextStateless}  from "@atlaskit/field-text";
 import Button from "@atlaskit/button";
 import {FormFooter} from "@atlaskit/form";
 
