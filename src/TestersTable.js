@@ -6,51 +6,11 @@ const Wrapper = styled.div`
   min-width: 600px;
 `;
 
+const NoResultPlaceholder = <h2>No matching results found</h2>;
+const ErrorResultPlaceholder = <h2>Error occured. Please check message above.</h2>;
+
 
 export default class TestersTable extends Component {
-
-    constructor() {
-        super();
-        this.state = {
-            rows: [{
-                firstName: "Melissa",
-                lastName: "Dowson",
-                country: "Argentina",
-                bugs: [
-                    {
-                        id: 1,
-                        title: "Sample bug"
-                    },
-                    {
-                        id: 2,
-                        title: "Yet one another bug"
-                    },
-                    {
-                        id: 3,
-                        title: "Some long long bug name"
-                    }
-                ]
-            }, {
-                firstName: "Johnathan",
-                lastName: "Arnhold",
-                country: "Israel",
-                bugs: []
-            },
-                {
-                    firstName: "Andrew",
-                    lastName: "Spencer",
-                    country: "Israel",
-                    bugs: []
-                },
-                {
-                    firstName: "Bob",
-                    lastName: "Spencer",
-                    country: "Israel",
-                    bugs: []
-                }
-            ]
-        };
-    }
 
     generateHeadings() {
         return {
@@ -129,6 +89,7 @@ export default class TestersTable extends Component {
                 defaultPage={1}
                 loadingSpinnerSize="large"
                 isLoading={this.props.isLoading}
+                emptyView={this.props.isError ? ErrorResultPlaceholder : NoResultPlaceholder}
                 isFixedSize
                 defaultSortKey="fname"
                 defaultSortOrder="ASC"

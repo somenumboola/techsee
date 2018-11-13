@@ -13,6 +13,7 @@
     "@atlaskit/tag": "^6.1.0",
     "@atlaskit/tag-group": "^6.0.7",
     "@atlaskit/tooltip": "^12.1.9",
+    "fetch-jsonp": "^1.1.3",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
     "react-scripts": "2.1.1",

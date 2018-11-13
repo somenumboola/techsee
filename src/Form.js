@@ -13,9 +13,7 @@ export default class SearchForm extends Component {
         super();
         this.state = {
             isInvalid: false,
-            searchQuery: "",
-            bannerText: "",
-            bannerState: ""
+            searchQuery: ""
         }
     }
 
@@ -23,7 +21,10 @@ export default class SearchForm extends Component {
         this.setState({
             searchQuery: "",
             isInvalid: false
-        })
+        });
+        if (this.props.onClear) {
+            this.props.onClear();
+        }
     };
 
     onQueryChange = (e) => {
@@ -50,7 +51,7 @@ export default class SearchForm extends Component {
                 <FieldTextStateless isInvalid={this.state.isInvalid} onKeyUp={this.reValidate} onChange={this.onQueryChange} onBlur={this.reValidate} value={this.state.searchQuery} label="Tester Name" placeholder="Enter the tester name..."/>
                 <FormFooter>
                     <Button isDisabled={this.state.isInvalid} isLoading={this.props.isLoading} onClick={this.handleFetch} appearance={"primary"}>Fetch</Button>&nbsp;
-                    <Button isDisabled={this.props.isLoading} onClick={this.onClear} appearance={"subtle"}>Clear</Button>
+                    <Button isDisabled={this.props.isLoading && !this.props.isError} onClick={this.onClear} appearance={"subtle"}>Clear</Button>
                     </FormFooter>
             </span>
         );
